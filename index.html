@@ -1,11 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script>
+    const limit = 15;
+    function checkBaggageWeight() {
+        let BaggageWeight = parseInt(document.getElementById("BaggageWeight").value);
+
+        alert('Baggage weight is: ' + BaggageWeight + 'kg');
+        if (BaggageWeight <= 15) {
+            alert('Baggage weight limit is allowed');
+        }
+        else {
+            alert('Baggage weight limit is overweight');
+        }
+    }
+
+
+
+
+</script>
+
 <body>
-    
+    <h1> Exercise 1</h1>
+    <p>Check Your Baggage weight</p>
+    <label for="Baggage weight">Enter Baggage Weight</label>
+
+    <input type="number" id="BaggageWeight" name="Baggage Weight">
+    <button onclick="checkBaggageWeight()">Check weight</button>
+</body>
+
+</html>
+<hr>
+
+
+<p>Ex2</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function m() {
+        let sum = 0;
+        for (let i = 1; i < 1000; i++) {
+            if (i % 3 === 0 || i % 5 === 0) {
+                sum += i;
+            }
+
+        }
+        alert(sum)
+    }
+
+
+</script>
+
+<body>
+    <h1>Ex2</h1>
+    <h2> The sum of 1000 natural numbers which are divisble by 3 and 5.</h2>
+    <p> Press the submit button to see the result.</p>
+    <button onclick="m()">Submit</button>
+
+</body>
+
+</html>
+<hr>
+
+<p>Ex3</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function abn() {
+        let a = parseInt(document.getElementById("a").value)
+        let b = parseInt(document.getElementById("b").value)
+        let n = parseInt(document.getElementById("n").value)
+        let sum = 0
+        for (let i = 1; i < n; i++) {
+            if (i % a === 0 || i % b === 0) {
+                sum += i;
+            }
+        }
+        alert(sum)
+
+    }
+</script>
+
+<body>
+    <h1>This is Exercise 3</h1>
+    <p>Assign value to all the boxes which are below :-)
+
+
+    </p>
+
+    <input type="number" id="a" />
+    <label>write a value for a </label>
+    <br>
+
+    <input type="number" id="b" />
+    <label>write a value for b </label>
+    <br>
+
+    <input type="number" id="n" /> <label>Press submit to get the answer</label>
+    <button onclick="abn()">Submit</button>
+
+</body>
+
+</html>
+<hr>
+
+<p>Euler 6</p>
+
+<h1> project uler problem no.6</h1>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function numsq() {
+        let sum1 = 0;
+        for (i = 1; i <= 100; i++) {
+            sum1 = sum1 + i * i
+
+        }
+        alert('square of sum is ' + sum1);
+
+        let sumofsq = 0;
+        for (i = 1; i <= 100; i++) {
+            sumofsq += i
+        }
+        sumofsq = sumofsq * sumofsq
+        alert('sum of square is ' + sumofsq);
+        let a = sumofsq - sum1
+        alert('difference is ' + a);
+    }
+</script>
+
+<body>
+    <h2>Difference of "sum of the squares-square of sum for first 100 natural numbers</h2>
+    <h2>Press the "submit" button</h2>
+    <button onclick="numsq()">submit</button>
+</body>
+
+</html> -->
+
+
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Exercise 4 & 4.1</h1>
+    <input type="number" id="a">
+    <label>write a value for "a"</label>
+    <br>
+    <input type="number" id="b">
+    <label>write a value for "b"</label>
+    <br>
+    <input type="text" id="l">
+    <label>write multiple values for "l" including comma(,)</label>
+    <button onclick="f4()">Press me!</button>
+
+    <script>
+        //not completed yet still in progress:---//
+        function f4() {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            let l = (document.getElementById("l").value.split(","));
+
+            let sum = 0
+            for (let i = 0; i < l.length; i++) {
+                let l1 = parseInt(l[i].trim());
+               
+                if(l1%a==0 || l1%b==0){
+                    sum = sum + l1
+                    
+                }
+
+
+
+
+                
+            }
+            alert(sum);
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Basket Exercise with Dictionaries and Hashables</h1>
+    <p>Exercise 7</p>
+     <script>
+
+        function ex(basket, price) {
+            let sum = 0;
+
+            for (let i in basket) {
+                sum += basket[i] * price[i];
+
+            }
+
+            return sum;
+
+
+        }
+
+
+
+
+        function hander_click() {
+            //basket items are written below
+            let basket = {
+                milk: 1,
+                eggs: 4,
+                bread: 2
+            }
+            //prices of each items are written below
+            let price = {//price of each product are as follows
+                milk: 3.55,
+                eggs: .90,
+                bread: 1,
+
+            }
+
+            let answer = ex(basket, price);
+            alert("Your total is " + answer);
+
+        }
+
+    </script>
+    <button onclick="hander_click()">Submit</button>
 </body>
 </html>
